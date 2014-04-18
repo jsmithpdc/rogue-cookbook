@@ -55,6 +55,9 @@ Attributes
 - `node['rogue']['networking']['database']['hostname']` = The database server's hostname.
 - `node['rogue']['networking']['database']['netmask']` = The database server's netmask (if applicable)
 - `node['rogue']['nginx']['locations']` = Key, value pairs used to generate nginx location directives.
+- `node['rogue']['postgresql']['user']` = The postgres username. Defaults to 'postgres'.
+- `node['rogue']['postgresql']['password']` = The postgres password. Defaults to `node['postgresql']['password']`.
+- `node['rogue']['postgresql']['port']` = The postgres port. Defaults to `node['postgresql']['password']`.
 - `node['rogue']['rogue_geonode']['location']` - The path on the node where ROGUE is installed.
 - `node['rogue']['rogue_geonode']['url']` - The git repository to use for ROGUE.
 - `node['rogue']['rogue_geonode']['branch']` - The branch to use for ROGUE.

@@ -9,6 +9,10 @@ default['rogue']['user'] = {:username=>'rogue',
                             :password=>'$1$oqU7lFMn$xYYGAjusAQ59R.NBEAwH7.'
                             }
 
+default['rogue']['postgresql']['user'] = 'postgres'
+default['rogue']['postgresql']['password'] = node['postgresql']['password']['postgres'] rescue 'postgres'
+default['rogue']['postgresql']['port'] = node['postgresql']['config']['port'] rescue '5432'
+
 default['rogue']['ssh']['public_key'] = ''
 default['rogue']['ssh']['public_key_remote_file'] = '/root/.ssh/id_rsa.pub'
 

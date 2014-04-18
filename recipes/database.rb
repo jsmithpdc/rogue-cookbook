@@ -1,8 +1,8 @@
 postgresql_connection_info = {
   :host     => node['rogue']['networking']['database']['hostname'],
-  :port     => node['postgresql']['config']['port'],
-  :username => 'postgres',
-  :password => node['postgresql']['password']['postgres']
+  :port     => node['rogue']['postgresql']['port'],
+  :username => node['rogue']['postgresql']['user'],
+  :password => node['rogue']['postgresql']['password']
 }
 
 geonode_connection_info = node['rogue']['rogue_geonode']['settings']['DATABASES']['default']
